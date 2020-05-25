@@ -19,6 +19,4 @@ app.get("/", function(req, res){
 	res.render("landing");
 });
 
-app.listen(3000, function(){
-	console.log("Server is running");
-})
+app.listen(process.env.PORT || 3000);
