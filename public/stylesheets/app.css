@@ -18,10 +18,6 @@ nav{
 	letter-spacing: 0.2em;
 }
 
-footer{
-	background-color: steelblue;
-}
-
 /* parallax effects */
 .parallax-1{
 	width:100%;
@@ -35,11 +31,11 @@ footer{
 
 .parallax-2{
 	width:100%;
-	height:400px;
+	height:40vh;
 }
 
 .parallax-window-2 {
-    height: 400px;
+    height: 40vh;
     background: transparent;
 }
 
@@ -54,7 +50,7 @@ footer{
 	  color: #5B95B0;
   }
 
-.dot {
+.content-1 .dot {
 	
 	text-align: center;
   margin: 0 auto;
@@ -78,6 +74,59 @@ p{
 	color: #5B95B0;
 }
 
+.LegendHummingbird{
+	background-color: #f4efe2;
+	padding: 0;
+}
+
+.rowImage{
+	width: 100%;
+}
+
 .content1logo {
 	height: 15vw;
+	margin-top: -60px;
+	transform: scaleX(-1);
+	
+}
+
+#panelContentLogo{
+	height: 200px;
+	margin-top: -75px;
+	transform: rotate(-20deg);
+}
+
+#panelContent{
+	margin-top: -50px;
+	line-height: 1.8;
+}
+
+footer, footer p{
+	font-family: 'PT Mono', monospace;
+	background-color: #00537b;
+	color: white !important;
+	text-align: left !important;
+	font-size: 0.8rem;
+}
+
+footer .dot{
+margin-top: -70px;
+		text-align: center;
+  height: 150px;
+  width: 350px;
+  border-radius: 50%;
+  display: inline-block;
+	background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,83,123,1) 50%);
+}
+
+footer h4{
+	font-size: 18px;
+    line-height: 1.2em;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-style: normal;
+	margin-bottom: 10%;
 }
