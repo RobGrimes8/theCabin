@@ -1,0 +1,87 @@
+nav img{
+	width: 60%;
+	height: 60%;
+}
+
+nav a{
+	color: #5B95B0;	
+	text-shadow: 2px 2px 2px black;
+}
+
+nav a:hover{
+	color: grey;
+} 
+
+nav{
+	background: transparent;
+	letter-spacing: 0.2em;
+}
+
+footer{
+	background-color: steelblue;
+}
+
+.parallax-1{
+	width:100%;
+	height:90vh;
+}
+
+.parallax-window {
+    height: 100vh;
+    background: transparent;
+}
+
+.parallax-2{
+	width:100%;
+	height:400px;
+}
+
+.parallax-window-2 {
+    height: 400px;
+    background: transparent;
+}
+
+.contentimg{
+	width:100%;
+}
+
+/* custom styling for all icons */
+  i.fas,
+  i.fab {
+    font-size: 2.5em;
+	  color: #5B95B0;
+  }
+
+.dot {
+	
+	text-align: center;
+  margin: 0 auto;
+  height: 150px;
+  width: 350px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/*body {
+  /* Location of the image */
+/*  background-image: url("/images/landingBackground.jpg");
+/*  
+/*  /* Background image is centered vertically and horizontally at all times */
+/*  background-position: center center;
+/*  
+/*  /* Background image doesn't tile */
+/*  background-repeat: no-repeat;
+/*  
+/*  /* Background image is fixed in the viewport so that it doesn't move when 
+/*     the content's height is greater than the image's height */
+/*  background-attachment: fixed;
+/*  
+/*  /* This is what makes the background image rescale based
+/*     on the container's size */
+/*  background-size: 100% auto;
+/*  
+/*  /* Set a background color that will be displayed
+/*     while the background image is loading */
+/*  background-color: #464646;
+/*} 
