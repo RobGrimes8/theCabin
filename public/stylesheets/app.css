@@ -135,3 +135,12 @@ footer h4{
     font-style: normal;
 	margin-bottom: 10%;
 }
+
+textarea {
+  resize: none;
+}
+
+form input{
+	background: red;
+}
+
