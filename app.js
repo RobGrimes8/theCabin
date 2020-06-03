@@ -26,7 +26,11 @@ app.get("/about", function(req, res){
 	res.render("about");
 });
 
-app.post("/about", function(req, res){
+app.get("/ourCF", function(req, res){
+	res.render("ourCF");
+});
+
+app.post("/about", validateEmail, function(req, res){
 	
 //========= Message page method. ============//
 	
@@ -55,10 +59,10 @@ app.post("/about", function(req, res){
 	var nodemailerMailgun = nodemailer.createTransport(mg(auth));
 
 	nodemailerMailgun.sendMail({
-	  from: req.body.email,
+	  from: req.body.message.email,
 	  to: 'grimesrob8@gmail.com', // An array if you have multiple recipients.
-	  subject: req.body.subject,
-	  text: req.body.message,
+	  subject: req.body.message.subject,
+	  text: req.body.message.content,
 	}, function (err, info) {
 	  if (err) {
 		console.log('Error: ' + err);
@@ -69,5 +73,23 @@ app.post("/about", function(req, res){
 	});
 	
 });
+
+function validateEmail(req, res, next){
+
+  const email = req.body.message.email;
+
+  if (validateEmail(email)) {
+    next();
+  } else {
+	res.render("about");
+  }
+  return false;
+};
+
+function validateEmailer(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
 
 app.listen(process.env.PORT || 3000);
