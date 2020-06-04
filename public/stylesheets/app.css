@@ -1,7 +1,7 @@
 /* navbar */
 nav img{
-	width: 60%;
-	height: 60%;
+	width: 50%;
+	height: 50%;
 }
 
 nav a{
@@ -14,12 +14,17 @@ nav a:hover{
 } 
 
 nav{
-	background: transparent;
+	backdrop-filter: saturate(180%) blur(20px);
+	background-color: rgba(255, 255, 255, 0.4);
 	letter-spacing: 0.2em;
 }
 
 .navbar-toggler{
 	border: none;	
+}
+
+#burgerIcon {
+	color: #00537b;
 }
 
 /* parallax effects */
@@ -75,6 +80,7 @@ h2 {
 	margin: 1em auto;
 	color: #00537b;
 	font-family: 'Satisfy', cursive;
+	text-align: center;
 }
 
 p{
@@ -158,4 +164,12 @@ textarea {
 .btn-primary:hover {
 	background-color: #005F8F;
 	border-color: #005F8F;
+}
+
+.menu {
+	background: #c7d5e4;
+}
+
+.top {
+	 margin-top: -60px;
 }
