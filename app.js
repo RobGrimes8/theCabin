@@ -12,7 +12,6 @@ var express 				= require("express"),
 
 	// Message 		= require("./models/message");
 
-// mongoose.connect("mongodb://localhost:27017/hummingbird", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 app.set("view engine", "ejs");
@@ -117,5 +116,4 @@ function validateEmailer(email) {
 
 
 app.listen(process.env.PORT || 3000, function(){
-	console.log(process.env);
 });
