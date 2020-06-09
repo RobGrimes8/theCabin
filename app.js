@@ -9,6 +9,7 @@ var express 				= require("express"),
 	passportLocalMongoose 	= require("passport-local-mongoose"),
 	nodemailer 				= require("nodemailer"),
 	mg = require('nodemailer-mailgun-transport');
+
 	// Message 		= require("./models/message");
 
 // mongoose.connect("mongodb://localhost:27017/hummingbird", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
@@ -28,6 +29,29 @@ app.get("/about", function(req, res){
 
 app.get("/ourCF", function(req, res){
 	res.render("ourCF");
+});
+
+app.get("/gallery", function(req, res){
+	
+	var allPhotos = [ {
+		image: "https://cdn.shopify.com/s/files/1/2395/7099/products/776090ea-9b4e-40c6-89c7-26d90397e503_900x.progressive.jpg?v=1589752683",
+		text: "what a lovely day today!!"
+	},
+	{
+		image: "https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/270/270202/cups-of-coffee.jpg?w=1155&h=1541",
+		text: "todays cup of coffee!"
+	},
+	{
+		image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/04/09/20/istock-157528129.jpg?w968h681",
+		text: "food was brilliant"
+	},
+	{
+		image: "https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/270/270202/cups-of-coffee.jpg?w=1155&h=1541",
+		text: "todays cup of coffee!"
+	}
+];
+	
+	res.render("gallery", {photos: allPhotos});
 });
 
 app.post("/about", validateEmail, function(req, res){
@@ -51,8 +75,8 @@ app.post("/about", validateEmail, function(req, res){
 	// This is your API key that you retrieve from www.mailgun.com/cp (free up to 10K monthly emails)
 	var auth = {
 	  auth: {
-		api_key: 'e2aeeef39623a26de1bdaa362124b2b5-7fba8a4e-37cff87b',
-		domain: 'sandbox9c133f797e2d43539301482c178e53b7.mailgun.org'
+		api_key: 'process.env.MAILGUN_AUTH_API_KEY',
+		domain: 'process.env.MAILGUN_DOMAIN'
 	  }
 	}
 
@@ -60,7 +84,7 @@ app.post("/about", validateEmail, function(req, res){
 
 	nodemailerMailgun.sendMail({
 	  from: req.body.message.email,
-	  to: 'grimesrob8@gmail.com', // An array if you have multiple recipients.
+	  to: 'process.env.MY_EMAIL', // An array if you have multiple recipients.
 	  subject: req.body.message.subject,
 	  text: req.body.message.content,
 	}, function (err, info) {
@@ -92,4 +116,6 @@ function validateEmailer(email) {
 }
 
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000, function(){
+	console.log(process.env);
+});

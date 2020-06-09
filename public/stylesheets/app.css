@@ -173,3 +173,7 @@ textarea {
 .top {
 	 margin-top: -60px;
 }
+
+.gallery img{
+	width: 100%;
+}

@@ -1,0 +1,28 @@
+<%- include("partials/header"); %>
+
+<div class="parallax-top">
+	<div class="parallax-window-4" data-parallax="scroll" data-image-src="/images/coffeeParalax4.jpg">
+		<%- include("partials/navbar"); %>
+	</div>
+</div>
+
+<div class="container gallery">
+	<div class="row mt-4">
+
+	<% photos.forEach(function(photo){ %>
+		<div class="col-4 mb-4">
+			<div class="card" style="width: 18rem;">
+				<img src="<%= photo.image %>" class="card-img-top" alt="...">
+				<div class="card-body">
+					<p class="card-text"><%= photo.text %></p>
+			  	</div>
+			</div>
+		</div>
+	<% }); %>
+	</div>
+
+</div>
+
+<%- include("partials/footer"); %>
+
+
