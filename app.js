@@ -116,4 +116,5 @@ function validateEmailer(email) {
 
 
 app.listen(process.env.PORT || 3000, function(){
+	console.log(process.env.MY_EMAIL);
 });

@@ -9,6 +9,10 @@ nav a{
 	text-shadow: 2px 2px 2px black;
 }
 
+nav img{
+	border-radius: 50%;
+}
+
 nav a:hover{
 	color: grey;
 } 
