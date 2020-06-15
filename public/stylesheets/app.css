@@ -6,7 +6,7 @@ nav img {
 }
 
 nav a {
-    color: #5B95B0;
+    color: #ffffff;
     text-shadow: 2px 2px 2px black;
 }
 
@@ -72,18 +72,17 @@ nav {
 i.fas,
 i.fab {
     font-size: 2.5em;
-    color: #5B95B0;
+    color: #C28C5E;
 }
 
 .dot {
-    margin-top: -70px;
+    margin-top: -150px;
     text-align: center;
     height: 150px;
     width: 300px;
     border-radius: 50%;
     display: inline-block;
     background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 50%, rgba(187, 209, 218, 1) 100%);
 }
 
 h2 {
@@ -191,11 +190,14 @@ textarea {
 .hero {
     color: white;
     font-size: 50px;
-    text-align: center;
+    text-align: left;
     position: absolute;
-    top: 40%;
-    left: 50%;
+    top: 50%;
+    left: 20%;
     transform: translate(-50%, -50%);
-    font-family: 'Londrina Outline', cursive;
-    text-shadow: 2px 2px 4px #000;
+    font-family: 'Satisfy', cursive;
+}
+
+.treeRow {
+    margin-top: -40px;
 }

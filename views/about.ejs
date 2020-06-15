@@ -1,51 +1,52 @@
 <%- include("partials/header") %>
 
-<!-- ===== Parallax 1 ==== -->
-<div class="parallax-top">
-	<div class="parallax-window-3" data-parallax="scroll" data-image-src="/images/coffeeMap.jpg">
-		<%- include("partials/navbar"); %>
-	</div>
-</div>
-<!-- ===== Parallax 1 ==== -->
-	<div class="row">
-			<span class="dot mx-auto"><i class="fas fa-chevron-down mt-4"></i></span>
-		</div>
-<div class="container">
+    <!-- ===== Parallax 1 ==== -->
+    <div class="parallax-top">
+        <div class="parallax-window-3" data-parallax="scroll" data-image-src="/images/coffeeMap.jpg">
+            <%- include("partials/navbar"); %>
+        </div>
+    </div>
+    <!-- ===== Parallax 1 ==== -->
+    <div class="row">
+        <span class="dot mx-auto"><i class="fas fa-chevron-down mt-4"></i></span>
+    </div>
+    <div class="container">
 
-	<div class="row justify-content-around pb-3">
-		<div class="col-md-4 mb-5">
-			<form action="/about" method="POST">
-				<h2>
-					Drop us a message!
-				</h2>
-				<div class="form-group">
-					<input class="form-control" type="text" name="message[name]" placeholder="Name" required>
-				</div>
-				<div class="form-group">
-					<input class="form-control" type="text" name="message[email]" placeholder="Email" required>
-				</div>
-				<div class="form-group">
-					<input class="form-control" type="text" name="message[subject]" placeholder="Subject" required>
-				</div>
-				<div class="form-group">
-					<textarea class="form-control" name="message[content]" placeholder="Message" required></textarea>
-				</div>
-				<button class="btn btn-lg btn-primary btn-block">Submit message</button>
-			</form>
-		</div>
-		<div class="col-md-8 mb-5">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.0386840075303!2d-3.002100048275233!3d51.768899979579224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4871dbb59a0afd57%3A0x37c205144fd8df84!2sHummingbird!5e0!3m2!1sen!2suk!4v1590509536512!5m2!1sen!2suk" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-		</div>
-	</div>
-</div>
+        <div class="row justify-content-around pb-3">
+            <div class="col-md-4 mb-5">
+                <form action="/about" method="POST">
+                    <h2>
+                        Drop us a message!
+                    </h2>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="message[name]" placeholder="Name - disabled for demo purposes" disabled required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="message[email]" placeholder="Email - disabled for demo purposes" disabled required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="message[subject]" placeholder="Subject - disabled for demo purposes" disabled required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message[content]" placeholder="Message - disabled for demo purposes" disabled required></textarea>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" disabled>Submit message</button>
+                </form>
+            </div>
+            <div class="col-md-8 mb-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90817.06007649461!2d-3.1075482845118763!3d52.9978054792552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4865331640553a6b%3A0xf4d20ec28a706807!2s7%20St%20Peter&#39;s%20Square%2C%20Ruthin%20LL15%201DL!5e0!3m2!1sen!2suk!4v1592221136302!5m2!1sen!2suk"
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
 
 
 
-<!-- ===== Parallax 2 ==== -->
-<!-- <div class="parallax-2">
+    <!-- ===== Parallax 2 ==== -->
+    <!-- <div class="parallax-2">
 	<div class="parallax-window-2" data-parallax="scroll" data-image-src="/images/coffee3.jpg">
 	</div>
 </div> -->
-<!-- ===== Parallax 2 ==== -->
+    <!-- ===== Parallax 2 ==== -->
 
-<%- include("partials/footer") %>
+    <%- include("partials/footer") %>
