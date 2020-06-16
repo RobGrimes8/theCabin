@@ -30,52 +30,45 @@
     <!-- ===== Parallax 1 ==== -->
 
     <div class="container">
-        <div class="content pt-4">
-            <div class="row mb-5 justify-content-around">
-                <div class="col-md-5">
-                    <div class="row">
-                        <div class="col-12">
-                            <img class="rowImage" src="/images/theCabinCoaster.jpg">
+        <div class="contentTop py-4">
+            <section class="about mb-5">
+                <div class=" row justify-content-around">
+                    <div class="col-md-5">
+                        <div class="row">
+
+                            <img class="overlayLogo" src="/images/cabinTree.png">
+
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <img src="/images/cabinTree.png" class="content1logo">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 overlay">
-                    <div class="row">
-                        <div class="col-12">
+                        <div class="row welcomeCard col-12">
                             <h2>Welcome to The Cabin</h2>
                             <p>
                                 Ruthin’s grooviest coffee shop, serving local coffee, beautiful homemade cakes and a wide variety of hot chocolates.
                             </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
                             <img class="rowImage" src="/images/coffee4-min.jpg">
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row mb-5 justify-content-center">
-
-                <div class="col-lg-6 px-5 LegendHummingbird">
-                    <div class="row justify-content-end">
-                        <img src="/images/LogoOutline.png" id="panelContentLogo">
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>A little about us</h1>
+                                <p>For all you coffee fanatics, burger lovers, sweet-toothed olympians and comfort food junkies, we know you’re all craving something different. You’ve come to the right place.</p>
+                                <p>We believe in the delicious, the fresh, the local and organic, the creative, and, of course, the unique and special. Located on Crwys Road, Stag Coffee is a proudly independent restaurant, serving freshly brewed coal town
+                                    coffee, exotic steaming teas, handmade comfort food and hungover favourites, hardy, gourmet, jam-packed burgers and a variety of delectable cakes and sweets.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row" id="panelContent">
+                </div>
+            </section>
+
+            <div class="row mb-5 justify-content-center">
+                <div class="col-lg-6 px-5 LegendHummingbird">
+                    <div class="panelContent my-auto">
                         <h2>
-                            The legend of the Hummingbird
+                            The Purpose of The Cabin
                         </h2>
+
                         <p>
-                            Legends say that hummingbirds float free of time, carrying our hopes for love, joy and celebration.
-                        </p>
-                        <p>
-                            Hummingbirds open our eyes to the wonder of the world and inspire us to open our hearts to loved ones and friends. Like a hummingbird, we aspire to hover and to savour each moment as it passes, embrace all that life has to offer and to celebrate the joy
-                            of everyday.
+                            The Cabin was born wiht the idea of bringing people together and to have somewhere where happiness could be spread.
                         </p>
                         <p>
                             The hummingbird's delicate grace reminds us that life is rich, beauty is everywhere, every personal connection has meaning and that laughter is life's sweetest creation.
@@ -84,7 +77,7 @@
 
                 </div>
                 <div class="col-lg-4 LegendHummingbird">
-                    <img class="rowImage" src="/images/coffee5.jpg">
+                    <img class="rowImage" src="/images/cabinInterior.jpg">
                 </div>
             </div>
         </div>
@@ -95,6 +88,37 @@
         </div>
     </div>
     <!-- ===== Parallax 2 ==== -->
+    <div class="container">
+        <div class="contentBottom py-4">
+            <div class="row justify-content-end pb-3">
+                <div class="col-md-4 mb-5">
+                    <form action="/about" method="POST">
+                        <h2>
+                            Drop us a message!
+                        </h2>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="message[name]" placeholder="Name - disabled for demo purposes" disabled required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="message[email]" placeholder="Email - disabled for demo purposes" disabled required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="message[subject]" placeholder="Subject - disabled for demo purposes" disabled required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message[content]" placeholder="Message - disabled for demo purposes" disabled required></textarea>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block" disabled>Submit message</button>
+                    </form>
+                </div>
+                <div class="col-md-7 mb-5">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90817.06007649461!2d-3.1075482845118763!3d52.9978054792552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4865331640553a6b%3A0xf4d20ec28a706807!2s7%20St%20Peter&#39;s%20Square%2C%20Ruthin%20LL15%201DL!5e0!3m2!1sen!2suk!4v1592221136302!5m2!1sen!2suk"
+                        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <%- include("partials/footer"); %>

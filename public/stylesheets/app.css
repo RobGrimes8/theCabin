@@ -3,13 +3,13 @@ body {
     background-color: #efefef;
 }
 
-.content {
+.contentTop {
     background-color: white;
+    margin-top: -10vh;
 }
 
-.overlay {
-    background-color: #f4efe2;
-    margin-top: -10vh;
+.contentBottom {
+    background-color: white;
 }
 
 
@@ -105,7 +105,8 @@ i.fab {
     background: rgb(255, 255, 255);
 }
 
-h2 {
+h2,
+.content h1 {
     margin: 1em auto;
     color: #00537b;
     font-family: 'Satisfy', cursive;
@@ -133,6 +134,25 @@ p {
     transform: scaleX(-1);
 }
 
+.overlayLogo {
+    position: relative;
+    height: 120px;
+    /* top: 75px; */
+    left: 25px;
+    z-index: 2;
+}
+
+.welcomeCard {
+    background-color: #f4efe2;
+    height: fit-content;
+    padding: 0;
+    margin-top: -75px;
+}
+
+.welcomeCard img {
+    width: 100%;
+}
+
 #panelContentLogo {
     height: 200px;
     margin-top: -75px;
@@ -140,8 +160,7 @@ p {
 }
 
 #panelContent {
-    margin-top: -50px;
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 footer,
