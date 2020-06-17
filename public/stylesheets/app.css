@@ -106,7 +106,8 @@ i.fab {
 }
 
 h2,
-.content h1 {
+.contentTop h1,
+.contentBottom h1 {
     margin: 1em auto;
     color: #00537b;
     font-family: 'Satisfy', cursive;
