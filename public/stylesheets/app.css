@@ -152,13 +152,6 @@ p {
     transition: transform 1s;
 }
 
-@media (max-width: 767px) {
-    /* CSS that should be displayed if width is equal to or less than 767px goes here */
-    .right {
-        transform: translateX(-200%) !important;
-    }
-}
-
 .right {
     transform: translateX(200%);
 }
@@ -179,7 +172,7 @@ p {
 
 .footerLogo {
     position: relative;
-    left: 100%;
+    left: 95%;
     height: 120px;
     z-index: 2;
     margin-top: -70px;
@@ -377,4 +370,18 @@ textarea {
     width: 1px;
     margin-top: 7%;
     height: 150px;
+}
+
+@media (max-width: 767px) {
+    /* CSS that should be displayed if width is equal to or less than 767px goes here */
+    .right {
+        transform: translateX(-200%) !important;
+    }
+    .footerLogo {
+        position: relative;
+        left: 80% !important;
+        height: 120px;
+        z-index: 2;
+        margin-bottom: -150px !important;
+    }
 }
