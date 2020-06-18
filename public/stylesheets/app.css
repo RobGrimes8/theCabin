@@ -152,6 +152,13 @@ p {
     transition: transform 1s;
 }
 
+@media (max-width: 767px) {
+    /* CSS that should be displayed if width is equal to or less than 767px goes here */
+    .right {
+        transform: translateX(-200%) !important;
+    }
+}
+
 .right {
     transform: translateX(200%);
 }
