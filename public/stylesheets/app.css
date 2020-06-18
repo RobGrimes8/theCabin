@@ -151,7 +151,11 @@ p {
     background-color: #f4efe2;
     height: fit-content;
     padding: 0;
-    margin-top: -75px;
+    margin: -75px 0 0;
+}
+
+.welcomeCard img {
+    width: 100%;
 }
 
 .welcomeCard img {
