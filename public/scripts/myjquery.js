@@ -7,8 +7,38 @@ $('.parallax-window-3').parallax({ imageSrc: '/images/coffeeMap.jpg' });
 $('.parallax-window-4').parallax({ imageSrc: '/images/coffeeParalax4.jpg' });
 
 $("#aboutLink").click(function() {
+    scrollTo(".about", 80);
+});
+
+$("#foodDrinkLink").click(function() {
+    scrollTo(".foodDrink", 40);
+});
+
+function scrollTo(there, off) {
     $('html,body').animate({
-            scrollTop: $(".about").offset().top - 90
+            scrollTop: $(there).offset().top - off
         },
         'slow');
+}
+
+$(window).scroll(function() {
+    showImages('.menuImg');
 });
+
+function showImages(el) {
+    var windowHeight = jQuery(window).height();
+    $(el).each(function() {
+        var thisPos = $(this).offset().top;
+
+        var topOfWindow = $(window).scrollTop();
+        if (topOfWindow + windowHeight - 200 > thisPos) {
+            $(this).removeClass("left");
+            $(this).removeClass("right");
+        }
+    });
+}
+
+function showModal(url) {
+    $("#modalImg").attr("src", url);
+    $(".modal-title").text(src);
+}

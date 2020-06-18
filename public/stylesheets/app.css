@@ -62,7 +62,7 @@ nav {
 
 .parallax-bottom {
     width: 100%;
-    height: 40vh;
+    height: 20vh;
 }
 
 .parallax-window {
@@ -72,7 +72,7 @@ nav {
 }
 
 .parallax-window-2 {
-    height: 40vh;
+    height: 20vh;
     background: transparent;
 }
 
@@ -99,16 +99,6 @@ i.fab {
     font-size: 1.5rem;
 }
 
-.dot {
-    margin-top: -150px;
-    text-align: center;
-    height: 150px;
-    width: 300px;
-    border-radius: 50%;
-    display: inline-block;
-    background: rgb(255, 255, 255);
-}
-
 h2,
 .contentTop h1,
 .contentBottom h1 {
@@ -118,15 +108,44 @@ h2,
     text-align: center;
 }
 
+hr {
+    width: 80%;
+}
+
 p {
     text-align: center;
     font-family: 'Noticia Text', serif;
     color: #5B95B0;
 }
 
-.LegendHummingbird {
+.parent {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.parent p {
+    display: flex;
+    align-items: center;
+}
+
+.purpose {
     background-color: #f4efe2;
-    padding: 0;
+}
+
+.menuImg {
+    width: 100%;
+    border-radius: 10%;
+    transition: all 1s;
+    transition: transform 1s;
+}
+
+.right {
+    transform: translateX(200%);
+}
+
+.left {
+    transform: translateX(-200%);
 }
 
 .rowImage {
@@ -261,44 +280,6 @@ textarea {
     animation: bounce 3s infinite;
 }
 
-@-moz-keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        -moz-transform: translateY(0);
-        transform: translateY(0);
-    }
-    40% {
-        -moz-transform: translateY(-30px);
-        transform: translateY(-30px);
-    }
-    60% {
-        -moz-transform: translateY(-15px);
-        transform: translateY(-15px);
-    }
-}
-
-@-webkit-keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-    40% {
-        -webkit-transform: translateY(-30px);
-        transform: translateY(-30px);
-    }
-    60% {
-        -webkit-transform: translateY(-15px);
-        transform: translateY(-15px);
-    }
-}
-
 @keyframes bounce {
     0%,
     20%,
@@ -322,4 +303,16 @@ textarea {
         -webkit-transform: translateY(-15px);
         transform: translateY(-15px);
     }
+}
+
+.gallery .card {
+    border-radius: 5%;
+}
+
+.modalImg {
+    width: 100%;
+}
+
+.modal-body {
+    padding: 0;
 }
