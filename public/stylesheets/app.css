@@ -60,6 +60,11 @@ nav {
     height: 110vh;
 }
 
+.parallax-top-gallery {
+    width: 100%;
+    height: 75vh;
+}
+
 .parallax-bottom {
     width: 100%;
     height: 20vh;
@@ -82,7 +87,7 @@ nav {
 }
 
 .parallax-window-4 {
-    height: 100vh;
+    height: 75vh;
     background: transparent;
 }
 
@@ -101,11 +106,17 @@ i.fab {
 
 h2,
 .contentTop h1,
-.contentBottom h1 {
+.contentBottom h1,
+.gallery h1 {
     margin: 1em auto;
     color: #00537b;
     font-family: 'Satisfy', cursive;
     text-align: center;
+}
+
+h3 {
+    color: #00537b;
+    font-family: 'Satisfy', cursive;
 }
 
 hr {
