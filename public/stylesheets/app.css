@@ -193,6 +193,15 @@ p {
     z-index: 2;
 }
 
+.overlayLogo2 {
+    position: relative;
+    height: 120px;
+    /* top: 75px; */
+    left: 40px;
+    z-index: 2;
+    top: -50px;
+}
+
 .welcomeCard {
     background-color: #f4efe2;
     height: fit-content;
