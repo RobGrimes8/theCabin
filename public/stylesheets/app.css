@@ -171,7 +171,7 @@ p {
 
 .footerLogo {
     position: relative;
-    height: 15vw;
+    height: 200px;
     margin-bottom: -60px;
     transform: scaleX(-1);
     left: 93vw;
