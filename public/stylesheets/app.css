@@ -385,3 +385,12 @@ textarea {
         margin-bottom: -150px !important;
     }
 }
+
+.rgFooter {
+    background-color: #006DA3;
+    text-align: center;
+}
+
+.rgFooter a {
+    color: #d6d6d6;
+}
