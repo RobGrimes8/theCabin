@@ -12,9 +12,9 @@
     </div>
 
     <div class="container gallery">
-        <div class="row my-5 justify-content-around">
+        <div class="row my-5 justify-content-around align-items-center">
             <% photos.forEach(function(photo){ %>
-                <div class="col-6 col-md-3 mb-2">
+                <div class="col-6 col-md-3 my-2">
                     <div class="card">
                         <img src="<%= photo.image %>" class="card-img-top" alt="..." data-toggle="modal" data-target="#galleryModal<%= photo.photoId %>">
                         <div class="card-body">

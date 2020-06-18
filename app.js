@@ -37,9 +37,33 @@ app.get("/gallery", function(req, res) {
         },
         {
             image: "https://scontent-lhr8-1.xx.fbcdn.net/v/t1.0-9/100105873_933786740409404_9185360274910085120_o.jpg?_nc_cat=107&_nc_sid=9267fe&_nc_ohc=sl8FTHQYmrUAX9g8rKJ&_nc_ht=scontent-lhr8-1.xx&oh=66f42358542a62a0cabbe25b6b991710&oe=5F12BB70",
-            title: "Todays cup of coffee!",
+            title: "Amazing weather today!",
             desc: "Granted, the weather is terrible today. But we have fresh hot coffee and delicious cakes for you to take home and enjoy, why not pop in and treat yourself? #localbusiness",
             photoId: "4"
+        },
+        {
+            image: "https://scontent-lhr8-1.xx.fbcdn.net/v/t1.0-9/103287452_944450469343031_6369883692757897880_o.jpg?_nc_cat=110&_nc_sid=9267fe&_nc_ohc=NBsz_tr-Cr0AX-qY0if&_nc_ht=scontent-lhr8-1.xx&oh=2238c5f728ba8ea7fc738e521729e0b1&oe=5F0FA93D",
+            title: "Food was brilliant",
+            desc: "Another gorgeous day in Ruthin! Second window finished. Time for a coffee!🌞🌈",
+            photoId: "5"
+        },
+        {
+            image: "https://scontent-lhr8-1.xx.fbcdn.net/v/t1.0-9/82518908_938809193240492_6423717413346344960_o.jpg?_nc_cat=109&_nc_sid=a26aad&_nc_ohc=Oh46nVufresAX-IsuLf&_nc_ht=scontent-lhr8-1.xx&oh=9d78b78ec730affcf0e2f9f29189784b&oe=5F11BB7A",
+            title: "Todays cup of coffee!",
+            desc: "Granted, the weather is terrible today. But we have fresh hot coffee and delicious cakes for you to take home and enjoy, why not pop in and treat yourself? #localbusiness",
+            photoId: "6"
+        },
+        {
+            image: "https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/88253696_876165216171557_742865433371082752_o.jpg?_nc_cat=100&_nc_sid=9267fe&_nc_ohc=DuvV6WdDmjwAX_CFB62&_nc_ht=scontent-lht6-1.xx&oh=e91547906b5a3123bd45bcbb8053deff&oe=5F11389E",
+            title: "Food was brilliant",
+            desc: "Another gorgeous day in Ruthin! Second window finished. Time for a coffee!🌞🌈",
+            photoId: "7"
+        },
+        {
+            image: "https://scontent-lhr8-1.xx.fbcdn.net/v/t1.0-9/82794666_846750642446348_7563659870382063616_n.jpg?_nc_cat=101&_nc_sid=8bfeb9&_nc_ohc=jRlLDkeOUAUAX_KvAwD&_nc_ht=scontent-lhr8-1.xx&oh=d7e1c25879d7a7f177729784dbc7a7f6&oe=5F114E1D",
+            title: "Todays cup of coffee!",
+            desc: "Granted, the weather is terrible today. But we have fresh hot coffee and delicious cakes for you to take home and enjoy, why not pop in and treat yourself? #localbusiness",
+            photoId: "8"
         }
     ];
 
