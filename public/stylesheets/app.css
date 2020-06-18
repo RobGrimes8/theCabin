@@ -188,18 +188,16 @@ p {
 .overlayLogo {
     position: relative;
     height: 120px;
-    /* top: 75px; */
     left: 25px;
     z-index: 2;
 }
 
 .overlayLogo2 {
     position: relative;
+    left: 100%;
     height: 120px;
-    /* top: 75px; */
-    left: 40px;
     z-index: 2;
-    top: -50px;
+    margin-top: -70px;
 }
 
 .welcomeCard {
