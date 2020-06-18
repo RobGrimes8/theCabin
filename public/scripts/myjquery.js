@@ -7,11 +7,17 @@ $('.parallax-window-3').parallax({ imageSrc: '/images/coffeeMap.jpg' });
 $('.parallax-window-4').parallax({ imageSrc: '/images/coffeeParalax4.jpg' });
 
 $("#aboutLink").click(function() {
-    scrollTo(".about", 80);
+    if ($(".about").length) {
+        scrollTo(".about", 80);
+        return false;
+    }
 });
 
 $("#foodDrinkLink").click(function() {
-    scrollTo(".foodDrink", 40);
+    if ($(".foodDrink").length) {
+        scrollTo(".foodDrink", 40);
+        return false;
+    }
 });
 
 function scrollTo(there, off) {
