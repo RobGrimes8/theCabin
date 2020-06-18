@@ -1,6 +1,7 @@
 body {
     width: 100%;
     background-color: #efefef;
+    overflow-x: hidden;
 }
 
 .contentTop {
