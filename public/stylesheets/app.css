@@ -316,3 +316,10 @@ textarea {
 .modal-body {
     padding: 0;
 }
+
+.partialBorder {
+    background: grey;
+    width: 1px;
+    margin-top: 7%;
+    height: 150px;
+}
