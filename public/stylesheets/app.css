@@ -253,7 +253,7 @@ textarea {
     resize: none;
 }
 
-.form-control {
+.form-controlRG {
     border: 0;
     border-bottom: 1px solid #555;
     border-radius: 0;
@@ -393,4 +393,35 @@ textarea {
 
 .rgFooter a {
     color: #d6d6d6;
+}
+
+form input {
+    width: 100%;
+}
+
+.blockquote-footer {
+    float: right;
+}
+
+.commentBox {
+    background-color: white;
+    width: 100%;
+    padding: 15px 0 10px;
+    border-radius: 10px;
+    border-collapse: separate;
+}
+
+.commentName {
+    float: left;
+    height: 100%;
+}
+
+.commentMessage {
+    height: 100%;
+}
+
+.commentDate {
+    float: right;
+    height: 100%;
+    color: grey;
 }

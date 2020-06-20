@@ -1,15 +1,51 @@
-var express = require("express"),
+let express = require("express"),
     app = express(),
     bodyParser = require("body-parser"),
     flash = require("connect-flash"),
-    methodOverride = require("method-override"),
-    mailgun = require('mailgun-js');
+    methodOverride = require("method-override");
+const mongoose = require('mongoose');
+var Filter = require('bad-words'),
+    filter = new Filter();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
 app.use(flash());
+
+const commentSchema = new mongoose.Schema({
+    name: String,
+    message: String,
+    date: String
+});
+const Comment = mongoose.model("Comment", commentSchema);
+
+mongoose.connect('mongodb+srv://' + process.env._MONGOOSE + '@cluster0-rkzfs.mongodb.net/The_Cabin?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+    // we're connected!
+    console.log("Db connected")
+
+
+
+
+    // const silence = new Comment({ name: "Beth", message: "I love cake!" });
+    // silence.save(function(err, silence) {
+    //     if (err) return console.log(err);
+    //     console.log(silence);
+    // })
+    // Comment.find(function(err, comments) {
+    //     if (err) return console.error(err);
+    //     console.log(comments);
+    // });
+    // Comment.find({ name: "Beth" }, function(err, comments) {
+    //     if (err) return console.log(err);
+    //     console.log(comments);
+    // });
+});
+
+
 
 app.get("/", function(req, res) {
     res.render("landing");
@@ -67,47 +103,42 @@ app.get("/gallery", function(req, res) {
         }
     ];
 
-    res.render("gallery", { photos: allPhotos });
-});
-
-app.post("/about", validateEmail, function(req, res) {
-
-    //========= Email sender method. ============//	
-    // This is your API key that you retrieve from www.mailgun.com/cp (free up to 10K monthly emails)
-    const api_key = process.env.API_KEY;
-    const DOMAIN = process.env.MAILGUN_DOMAIN;
-    const mg = mailgun({ apiKey: api_key, domain: DOMAIN });
-    const data = {
-        from: req.body.name + ' <' + req.body.email + '>',
-        to: process.env.RECIPIENT_EMAIL,
-        subject: "I'm interested in a " + req.body.interest,
-        text: req.body.message
-    };
-    mg.messages().send(data, function(error, body) {
-        console.log(body);
+    Comment.find(function(err, comments) {
+        if (err) return console.error(err);
+        res.render("gallery", { photos: allPhotos, comments: comments });
     });
-    req.flash("info", "Message sent! I will be back in touch as soon as possible.")
-    res.redirect('/');
+
+
 
 });
 
-function validateEmail(req, res, next) {
+app.post("/gallery", function(req, res) {
+    let name = req.body.name,
+        message = req.body.message;
 
-    const email = req.body.message.email;
-
-    if (validateEmail(email)) {
-        next();
+    if (filter.isProfane(message)) {
+        console.log("You cannot use that language");
+        res.redirect("/gallery");
     } else {
-        res.render("about");
+        if (name === "") {
+            name = "Coffee Fan!";
+        }
+
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = dd + '/' + mm + '/' + yyyy;
+
+        const newComment = new Comment({ name: name, message: message, date: today });
+        newComment.save(function(err, silence) {
+            if (err) return console.log(err);
+        })
+        res.redirect("/gallery");
     }
-    return false;
-};
 
-function validateEmailer(email) {
-    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-}
-
+})
 
 app.listen(process.env.PORT || 3000, function() {
     console.log("Server is up and running boss")
