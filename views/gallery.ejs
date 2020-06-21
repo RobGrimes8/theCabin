@@ -16,7 +16,7 @@
             <% photos.forEach(function(photo){ %>
                 <div class="col-6 col-md-3 my-2">
                     <div class="card">
-                        <img src="<%= photo.image %>" class="card-img-top" alt="..." data-toggle="modal" data-target="#galleryModal<%= photo.photoId %>">
+                        <img src="<%= photo.image %>" class="card-img-top" alt="..." data-toggle="modal" data-target="#galleryModal<%= photo._id %>">
                         <div class="card-body">
                             <p class="card-text">
                                 <%= photo.title %>
@@ -26,7 +26,7 @@
                 </div>
 
                 <!-- Modal -->
-                <div class="modal fade" id="galleryModal<%= photo.photoId %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="galleryModal<%= photo._id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
