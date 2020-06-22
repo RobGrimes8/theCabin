@@ -1,17 +1,18 @@
-let express = require("express"),
+const express = require("express"),
     app = express(),
-    bodyParser = require("body-parser"),
+    Filter = require('bad-words'),
+    mongoose = require('mongoose'),
     flash = require("connect-flash"),
+    bodyParser = require("body-parser"),
     methodOverride = require("method-override");
-const mongoose = require('mongoose');
-var Filter = require('bad-words'),
-    filter = new Filter();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
 app.use(flash());
+
+const filter = new Filter();
 
 const commentSchema = new mongoose.Schema({
     name: String,
